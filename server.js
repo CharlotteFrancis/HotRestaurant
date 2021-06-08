@@ -11,11 +11,6 @@ app.use(express.static(join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
 
-
-
-
-
-
 // this line runs our server, the variable is for Heroku deployment, number is for localhost
 app.listen(process.env.PORT || 3000, () => {
   if (process.env.PORT) {
