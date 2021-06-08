@@ -1,18 +1,17 @@
-var tableData = require(../db/tableData)
-var waitingData = require(../db/waitingData)
+const tableData = require('../db/tableData.js')
+const waitingData = require('../db/waitinglistData.js')
 
-modeule.exports = function(app) 
-{
-  app.get("/api/table", function(req, res)
+module.exports = function (app) {
+  app.get("/api/table", function (req, res)
   {
     res.json(tableData)
   })
-  app.get("/api.waitlist", function(req, res)
+  app.get("/api.waitlist", function (req, res)
   {
     res.json(waitListData)
   })
 
-  app.post("/api/tables", function(re, res)
+  app.post("/api/tables", function (req, res)
   {
     if (tableData.length < 5)
     {

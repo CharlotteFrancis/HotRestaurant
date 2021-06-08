@@ -7,7 +7,7 @@ module.exports = function(app)
     res.sendFile(path.join(__dirname, "../public/"))
   })
 
-  app.get"(/reserve", function(req, res) 
+  app.get("/reserve", function(req, res)
   {
     res.sendFile(path.join(__dirname, "../public"))
   })
