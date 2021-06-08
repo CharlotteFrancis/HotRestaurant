@@ -1,0 +1,25 @@
+{
+  "name": "HotRestaurant",
+  "version": "1.0.0",
+  "description": "reservations and waiting list for a restaurant",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlotteFrancis/HotRestaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CharlotteFrancis/HotRestaurant/issues"
+  },
+  "homepage": "https://github.com/CharlotteFrancis/HotRestaurant#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1"
+  }
+}
