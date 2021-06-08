@@ -63,5 +63,31 @@
   <script src="https://code.jquery.com/jquery.js"></script>
   <!-- bootstrap -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- our js -->
+  <script>
+
+    // get the data from tables
+    const getTables = _ => {
+      axios.get('/api/table')
+        .then((res) => {
+          const tables = res.data
+          console.log(tables)
+        })
+        .catch(err => console.log(err))
+
+      axios.get('api/waitlist')
+        .then((resp) => {
+          const list = resp.data
+          console.log(list)
+        })
+        .catch(err => console.log(err))
+    }
+
+    
+
+    getTables()
+  </script>
 </body>
 </html>
