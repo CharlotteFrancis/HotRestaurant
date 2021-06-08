@@ -1,12 +1,12 @@
 const tableData = require('../db/tableData.js')
-const waitingData = require('../db/waitinglistData.js')
+const waitListData = require('../db/waitinglistData.js')
 
 module.exports = function (app) {
   app.get("/api/table", function (req, res)
   {
     res.json(tableData)
   })
-  app.get("/api.waitlist", function (req, res)
+  app.get("/api/waitlist", function (req, res)
   {
     res.json(waitListData)
   })
