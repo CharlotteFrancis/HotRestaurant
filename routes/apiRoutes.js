@@ -1,5 +1,5 @@
-var tableData = require(../db/tableData)
-var waitingData = require(../db/waitingData)
+var tableData = require("../db/tableData")
+var waitinglistData = require("../db/waitinglistData")
 
 modeule.exports = function(app) 
 {
@@ -12,7 +12,7 @@ modeule.exports = function(app)
     res.json(waitListData)
   })
 
-  app.post("/api/tables", function(re, res)
+  app.post("/api/tables", function(req, res)
   {
     if (tableData.length < 5)
     {
