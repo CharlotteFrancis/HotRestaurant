@@ -41,8 +41,14 @@
   <script>
     // Use jQuery to run AJAX calls to GET and POST data 
     // from users to the Express server
-    $.ajax()
-
+    axios.get('/')
+      .then((res) => {
+        console.log(res.data)
+      })
+      .catch(err => console.log(err))
+    
+    
+    
   </script>
 
 </body>
