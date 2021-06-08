@@ -11,7 +11,7 @@ module.exports = function (app) {
     res.json(waitListData)
   })
 
-  app.post("/api/tables", function (req, res)
+  app.post("/api/table", function (req, res)
   {
     if (tableData.length < 5)
     {
@@ -20,7 +20,7 @@ module.exports = function (app) {
     }
     else
     {
-      waitingData.push(req.body)
+      waitListData.push(req.body)
       res.json(false)
     }
   })
