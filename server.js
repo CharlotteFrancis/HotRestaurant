@@ -22,7 +22,6 @@ require("./routes/htmlRoutes.js")(app)
 // this line runs our server, the variable is for Heroku deployment, number is for localhost
 app.listen(process.env.PORT || 3000, () => {
   if (process.env.PORT) {
-
   } else {
     console.log('Listening at port 3000...')
   }
