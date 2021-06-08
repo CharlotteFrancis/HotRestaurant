@@ -10,3 +10,5 @@ let tables = require('./db/tableData.js'), waitingList = require('./db/waitingli
 app.use(express.static(join(__dirname, 'public')))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.json())
+
+app.listen(3000)
