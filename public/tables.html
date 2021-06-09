@@ -73,7 +73,19 @@
       axios.get('/api/table')
         .then((res) => {
           const tables = res.data
-          console.log(tables)
+          // console.log(tables)
+          tables.forEach(table => {
+            let reservation = document.createElement('li')
+            reservation.classList.add('list-group-item')
+            // console.log(table.customerName) 
+            reservation.innerHTML =  `
+            Name: ${table.customerName}<br>
+            Email: ${table.customerEmail}<br>
+            Phone Number: ${table.phoneNumber}<br>
+            `
+            // console.log(reservation)
+            document.getElementById('tableList').append(reservation)
+          })
         })
         .catch(err => console.log(err))
 
@@ -81,6 +93,16 @@
         .then((resp) => {
           const list = resp.data
           console.log(list)
+          list.forEach(item => {
+            let wl = document.createElement('li')
+            wl.classList.add('list-group-item')
+            wl.innerHTML = `
+            Name: ${item.customerName}<br>
+            Email: ${item.customerEmail}<br>
+            Phone Number: ${item.phoneNumber}<br>
+            `
+            document.getElementById('waitList').append(wl)
+          })
         })
         .catch(err => console.log(err))
     }
